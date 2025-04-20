@@ -25,7 +25,7 @@
 '''
 
 from classes import Board, Player
-
+ 
 board = Board()
 player_1 = Player("Player1")
 player_2 = Player("Player2")
