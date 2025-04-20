@@ -70,6 +70,12 @@ class Player():
     def play_move(self, board, opponent):
         square = int(input(f"{self.name}, pick a sqaure: "))
         while True:
+            if board.playing_board[square] == "X" or board.playing_board[square] == "O":
+                square = int(input(f"Square {square}, is taken. \n\tPlay another square: "))
+            else:
+                break
+        
+        while True:
             move = input(f"{self.name}, play {self.move or 'X/O'}: ").upper()
 
             if move == opponent.move:
